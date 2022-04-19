@@ -8,6 +8,7 @@
         <center>
             <h2>Detalhes do BD Elmasri</h2>
         </center>
+        <img src="esquema_elmasri_bernardo.png" alt="esquema_elmasri_bernardo">
         <h3>List of tables</h3>
         <ul>
             <li>
