@@ -14,34 +14,35 @@
    <remarks></remarks>
    <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
     <column id="COL2" populated="true" UUID="2029b1b1-75e1-4228-8a5d-537874e6b822" autoIncrement="false" autoIncrementSequenceName="funcionario_cpf_seq" defaultValue="" name="cpf" nullable="0" physicalName="cpf" precision="11" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
-     <remarks></remarks>
+     <remarks>CPF do funcionário.</remarks>
     </column>
     <column id="COL3" populated="true" UUID="eaf50576-5376-4cd2-b655-60009fda3926" autoIncrement="false" autoIncrementSequenceName="funcionario_primeiro_nome_seq" defaultValue="" name="primeiro_nome" nullable="0" physicalName="primeiro_nome" precision="15" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Primeiro nome do funcionário.</remarks>
     </column>
     <column id="COL4" populated="true" UUID="bd0d1488-a24a-42be-bf6a-8fee56c4fe9a" autoIncrement="false" autoIncrementSequenceName="funcionario_nome_meio_seq" defaultValue="" name="nome_meio" nullable="1" physicalName="nome_meio" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
-     <remarks></remarks>
+     <remarks>Inicial do nome do meio do funcionário.</remarks>
     </column>
     <column id="COL5" populated="true" UUID="f215e291-6662-435a-b9e5-54c3f7aee9ce" autoIncrement="false" autoIncrementSequenceName="funcionario_ultimo_nome_seq" defaultValue="" name="ultimo_nome" nullable="0" physicalName="ultimo_nome" precision="15" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Último nome do funcionário.</remarks>
     </column>
     <column id="COL6" populated="true" UUID="9ca5b731-691c-4bcf-b5a0-52bed61b7e76" autoIncrement="false" autoIncrementSequenceName="funcionario_data_nascimento_seq" defaultValue="" name="data_nascimento" nullable="1" physicalName="data_nascimento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
-     <remarks></remarks>
+     <remarks>Data de nascimento do funcionário.
+</remarks>
     </column>
     <column id="COL7" populated="true" UUID="870b1322-c948-4cbe-a7f8-c081cecded36" autoIncrement="false" autoIncrementSequenceName="funcionario_endereco_seq" defaultValue="" name="endereco" nullable="1" physicalName="endereco" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Endereço do funcionário.</remarks>
     </column>
     <column id="COL8" populated="true" UUID="3e70218d-678a-4cb5-a46d-d8f53c6c40e8" autoIncrement="false" autoIncrementSequenceName="funcionario_sexo_seq" defaultValue="" name="sexo" nullable="1" physicalName="sexo" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
-     <remarks></remarks>
+     <remarks>Inicial do sexo do funcionário.</remarks>
     </column>
     <column id="COL9" populated="true" UUID="b7013069-6d84-4992-9d36-3372ce552220" autoIncrement="false" autoIncrementSequenceName="funcionario_salario_seq" defaultValue="" name="salario" nullable="1" physicalName="salario" precision="10" referenceCount="1" scale="2" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
-     <remarks></remarks>
+     <remarks>Salário do funcionário.</remarks>
     </column>
     <column id="COL10" populated="true" UUID="c512b1e9-ed14-4e12-a837-cc43fe3e1307" autoIncrement="false" autoIncrementSequenceName="funcionario_cpf_supervisor_seq" defaultValue="" name="cpf_supervisor" nullable="0" physicalName="cpf_supervisor" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
-     <remarks></remarks>
+     <remarks>CPF do supervisor. É uma FK para a própria tabela, pois o supervisor também é um funcionário.</remarks>
     </column>
     <column id="COL11" populated="true" UUID="1a1a17e7-af1e-467f-9e31-d7be2df17408" autoIncrement="false" autoIncrementSequenceName="funcionario_numero_departamento_seq" defaultValue="" name="numero_departamento" nullable="0" physicalName="numero_departamento" precision="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Número do departamento do funcionário. É uma FK para a tabela departamento.</remarks>
     </column>
     </folder>
     <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -58,16 +59,16 @@
    <remarks></remarks>
    <folder id="FOLTAB141" populated="true" name="Columns" physicalName="Columns" type="1">
     <column id="COL15" populated="true" UUID="7996fb04-2861-4be4-a2ae-75a89f77b604" autoIncrement="false" autoIncrementSequenceName="departamento_numero_departamento_seq" defaultValue="" name="numero_departamento" nullable="0" physicalName="numero_departamento" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Número do departamento.</remarks>
     </column>
     <column id="COL16" populated="true" UUID="ad19d6f4-4992-4eee-b876-87405b80fa1e" autoIncrement="false" autoIncrementSequenceName="departamento_nome_departamento_seq" defaultValue="" name="nome_departamento" nullable="0" physicalName="nome_departamento" precision="15" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Nome do departamento.</remarks>
     </column>
     <column id="COL17" populated="true" UUID="35ca466e-7128-4ed8-bb4a-c9e9de756070" autoIncrement="false" autoIncrementSequenceName="departamento_data_inicio_gerente_seq" defaultValue="" name="data_inicio_gerente" nullable="1" physicalName="data_inicio_gerente" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
-     <remarks></remarks>
+     <remarks>Data de início do gerente no departamento.</remarks>
     </column>
     <column id="COL18" populated="true" UUID="eb2d0847-f0a1-4490-b519-e22b6a258af4" autoIncrement="false" autoIncrementSequenceName="funcionario_cpf_gerente_seq" defaultValue="" name="cpf_gerente" nullable="0" physicalName="cpf_gerente" precision="11" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
-     <remarks></remarks>
+     <remarks>CPF do gerente do departamento. É uma FK para a tabela funcionários.</remarks>
     </column>
     </folder>
     <folder id="FOLTAB143" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -87,10 +88,11 @@
    <remarks></remarks>
    <folder id="FOLTAB231" populated="true" name="Columns" physicalName="Columns" type="1">
     <column id="COL24" populated="true" UUID="2875525e-b73e-41fe-be21-779934c0e0eb" autoIncrement="false" autoIncrementSequenceName="localizacoes_departamento_numero_departamento_seq" defaultValue="" name="numero_departamento" nullable="0" physicalName="numero_departamento" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Número do departamento. É uma FK para departamento.
+</remarks>
     </column>
     <column id="COL25" populated="true" UUID="95155f7a-dcd8-40c8-81d4-8d5ebdd594ce" autoIncrement="false" autoIncrementSequenceName="localizacoes_departamento_local_seq" defaultValue="" name="local" nullable="0" physicalName="local" precision="15" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Localização do departamento.</remarks>
     </column>
     </folder>
     <folder id="FOLTAB233" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -108,16 +110,16 @@
    <remarks></remarks>
    <folder id="FOLTAB291" populated="true" name="Columns" physicalName="Columns" type="1">
     <column id="COL30" populated="true" UUID="2d475f8a-1a82-469a-bb42-ee6b17b1a5e6" autoIncrement="false" autoIncrementSequenceName="projeto_numero_projeto_seq" defaultValue="" name="numero_projeto" nullable="0" physicalName="numero_projeto" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Número do projeto.</remarks>
     </column>
     <column id="COL31" populated="true" UUID="fa14e7b6-8286-47ea-80da-350d3be57ca1" autoIncrement="false" autoIncrementSequenceName="projeto_nome_projeto_seq" defaultValue="" name="nome_projeto" nullable="0" physicalName="nome_projeto" precision="15" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Nome do projeto. Deve ser único, é uma chave alternativa.</remarks>
     </column>
     <column id="COL32" populated="true" UUID="77b19b1b-a864-4ca2-9a01-3e3ca9c72ba4" autoIncrement="false" autoIncrementSequenceName="projeto_numero_departamento_seq" defaultValue="" name="numero_departamento" nullable="0" physicalName="numero_departamento" precision="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Número do departamento que o projeto pertence. É uma FK para a tabela departamento.</remarks>
     </column>
     <column id="COL33" populated="true" UUID="f105cf0f-ca94-4d16-9d75-f889822cde3b" autoIncrement="false" autoIncrementSequenceName="projeto_local_projeto_seq" defaultValue="" name="local_projeto" nullable="1" physicalName="local_projeto" precision="15" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Localização do projeto.</remarks>
     </column>
     </folder>
     <folder id="FOLTAB293" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -137,13 +139,13 @@
    <remarks></remarks>
    <folder id="FOLTAB381" populated="true" name="Columns" physicalName="Columns" type="1">
     <column id="COL39" populated="true" UUID="6bc9c459-a80f-4392-b542-f121c786e553" autoIncrement="false" autoIncrementSequenceName="trabalha_em_cpf_funcionario_seq" defaultValue="" name="cpf_funcionario" nullable="0" physicalName="cpf_funcionario" precision="11" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
-     <remarks></remarks>
+     <remarks>CPF dp funcionário. É uma FK para a tabela funcionário.</remarks>
     </column>
     <column id="COL40" populated="true" UUID="19275dec-3b7c-41cc-b8d7-09c489fadf78" autoIncrement="false" autoIncrementSequenceName="projeto_numero_projeto_seq" defaultValue="" name="numero_projeto" nullable="0" physicalName="numero_projeto" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Número do projeto. É uma FK para a tabela projeto.</remarks>
     </column>
     <column id="COL41" populated="true" UUID="2c937be5-0044-46bb-9c5f-a72ff56ae815" autoIncrement="false" autoIncrementSequenceName="trabalha_em_horas_seq" defaultValue="" name="horas" nullable="0" physicalName="horas" precision="3" referenceCount="1" scale="1" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
-     <remarks></remarks>
+     <remarks>Horas trabalhadas pelo funcionário no projeto.</remarks>
     </column>
     </folder>
     <folder id="FOLTAB383" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -161,19 +163,19 @@
    <remarks></remarks>
    <folder id="FOLTAB451" populated="true" name="Columns" physicalName="Columns" type="1">
     <column id="COL46" populated="true" UUID="70c1331d-8994-4ddc-be5f-a3a4aa75e09d" autoIncrement="false" autoIncrementSequenceName="dependente_nome_dependente_seq" defaultValue="" name="nome_dependente" nullable="0" physicalName="nome_dependente" precision="15" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Nome do dependente.</remarks>
     </column>
     <column id="COL47" populated="true" UUID="ef84acb5-0c1f-465d-bc76-45cf5e4bc220" autoIncrement="false" autoIncrementSequenceName="dependente_cpf_funcionario_seq" defaultValue="" name="cpf_funcionario" nullable="0" physicalName="cpf_funcionario" precision="11" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
-     <remarks></remarks>
+     <remarks>CPF do funcionário. É uma FK para a tabela funcionário.</remarks>
     </column>
     <column id="COL48" populated="true" UUID="b110c7ec-1737-42c3-ad54-961253821115" autoIncrement="false" autoIncrementSequenceName="dependente_sexo_seq" defaultValue="" name="sexo" nullable="1" physicalName="sexo" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
-     <remarks></remarks>
+     <remarks>Sexo do dependente.</remarks>
     </column>
     <column id="COL49" populated="true" UUID="f82a36b3-aa23-4576-ad0f-f6777a620e1f" autoIncrement="false" autoIncrementSequenceName="dependente_data_nascimento_seq" defaultValue="" name="data_nascimento" nullable="1" physicalName="data_nascimento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
-     <remarks></remarks>
+     <remarks>Data de nascimento do dependente.</remarks>
     </column>
     <column id="COL50" populated="true" UUID="e64bde60-ec72-4747-b202-fe844eba2bed" autoIncrement="false" autoIncrementSequenceName="dependente_parentesco_seq" defaultValue="" name="parentesco" nullable="1" physicalName="parentesco" precision="8" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Parentesco entre dependente e funcionário.</remarks>
     </column>
     </folder>
     <folder id="FOLTAB453" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">

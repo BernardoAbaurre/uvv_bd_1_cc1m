@@ -26,8 +26,7 @@
      <remarks>Último nome do funcionário.</remarks>
     </column>
     <column id="COL6" populated="true" UUID="9ca5b731-691c-4bcf-b5a0-52bed61b7e76" autoIncrement="false" autoIncrementSequenceName="funcionario_data_nascimento_seq" defaultValue="" name="data_nascimento" nullable="1" physicalName="data_nascimento" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
-     <remarks>Data de nascimento do funcionário.
-</remarks>
+     <remarks>Data de nascimento do funcionário.</remarks>
     </column>
     <column id="COL7" populated="true" UUID="870b1322-c948-4cbe-a7f8-c081cecded36" autoIncrement="false" autoIncrementSequenceName="funcionario_endereco_seq" defaultValue="" name="endereco" nullable="1" physicalName="endereco" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Endereço do funcionário.</remarks>
@@ -88,8 +87,7 @@
    <remarks></remarks>
    <folder id="FOLTAB231" populated="true" name="Columns" physicalName="Columns" type="1">
     <column id="COL24" populated="true" UUID="2875525e-b73e-41fe-be21-779934c0e0eb" autoIncrement="false" autoIncrementSequenceName="localizacoes_departamento_numero_departamento_seq" defaultValue="" name="numero_departamento" nullable="0" physicalName="numero_departamento" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks>Número do departamento. É uma FK para departamento.
-</remarks>
+     <remarks>Número do departamento. É uma FK para departamento.</remarks>
     </column>
     <column id="COL25" populated="true" UUID="95155f7a-dcd8-40c8-81d4-8d5ebdd594ce" autoIncrement="false" autoIncrementSequenceName="localizacoes_departamento_local_seq" defaultValue="" name="local" nullable="0" physicalName="local" precision="15" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Localização do departamento.</remarks>
