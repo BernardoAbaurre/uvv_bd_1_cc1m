@@ -7,8 +7,8 @@
     <body>
         <center>
             <h2>Detalhes do BD Elmasri</h2>
-            <img src="pset1/esquema_elmasri_bernardo.png" alt="esquema_elmasri_bernardo">
         </center>
+        <img src="pset1/esquema_elmasri_bernardo.png" alt="esquema_elmasri_bernardo">
         <h3>List of tables</h3>
         <ul>
             <li>
@@ -46,16 +46,36 @@
                 <tr valign="top">
                     <td class="tdTableDefinition">numero_departamento (PK)</td><td class="tdTableDefinition">numero_departamento</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">N&uacute;mero do departamento.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">nome_departamento</td><td class="tdTableDefinition">nome_departamento</td><td class="tdTableDefinition">VARCHAR(15)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Nome do departamento.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">data_inicio_gerente</td><td class="tdTableDefinition">data_inicio_gerente</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Data de in&iacute;cio do gerente no departamento.</div>
+                    </td>
                 </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">cpf_gerente
                 &nbsp;(<a href="#Funcionario">FK</a>)
               </td><td class="tdTableDefinition">cpf_gerente</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">CPF do gerente do departamento. &Eacute; uma FK para a tabela funcion&aacute;rios.</div>
+                    </td>
                 </tr>
             </table>
             <div class="references">
@@ -72,6 +92,9 @@
                     </li>
                     <li>
                         <a href="#localizacoes_departamento">localizacoes_departamento</a> referencing (numero_departamento)
+                    </li>
+                    <li>
+                        <a href="#Funcionario">Funcionario</a> referencing (numero_departamento)
                     </li>
                 </ul>
             </div>
@@ -92,19 +115,44 @@
                 <tr valign="top">
                     <td class="tdTableDefinition">nome_dependente (PK)</td><td class="tdTableDefinition">nome_dependente</td><td class="tdTableDefinition">VARCHAR(15)</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Nome do dependente.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">cpf_funcionario (PK)
                 &nbsp;(<a href="#Funcionario">FK</a>)
               </td><td class="tdTableDefinition">cpf_funcionario</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">CPF do funcion&aacute;rio. &Eacute; uma FK para a tabela funcion&aacute;rio.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">sexo</td><td class="tdTableDefinition">sexo</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Sexo do dependente.</div>
+                    </td>
                 </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">data_nascimento</td><td class="tdTableDefinition">data_nascimento</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Data de nascimento do dependente.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">parentesco</td><td class="tdTableDefinition">parentesco</td><td class="tdTableDefinition">VARCHAR(8)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Parentesco entre dependente e funcion&aacute;rio.</div>
+                    </td>
                 </tr>
             </table>
             <div class="references">
@@ -132,34 +180,89 @@
                 <tr valign="top">
                     <td class="tdTableDefinition">cpf (PK)</td><td class="tdTableDefinition">cpf</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">CPF do funcion&aacute;rio.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">primeiro_nome</td><td class="tdTableDefinition">primeiro_nome</td><td class="tdTableDefinition">VARCHAR(15)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Primeiro nome do funcion&aacute;rio.</div>
+                    </td>
                 </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">nome_meio</td><td class="tdTableDefinition">nome_meio</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Inicial do nome do meio do funcion&aacute;rio.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">ultimo_nome</td><td class="tdTableDefinition">ultimo_nome</td><td class="tdTableDefinition">VARCHAR(15)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">&Uacute;ltimo nome do funcion&aacute;rio.</div>
+                    </td>
                 </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">data_nascimento</td><td class="tdTableDefinition">data_nascimento</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">
+                            Data de nascimento do funcion&aacute;rio.
+                            <br>
+                        </div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">endereco</td><td class="tdTableDefinition">endereco</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Endere&ccedil;o do funcion&aacute;rio.</div>
+                    </td>
                 </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">sexo</td><td class="tdTableDefinition">sexo</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Inicial do sexo do funcion&aacute;rio.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">salario</td><td class="tdTableDefinition">salario</td><td class="tdTableDefinition">DECIMAL(10,2)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Sal&aacute;rio do funcion&aacute;rio.</div>
+                    </td>
                 </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">cpf_supervisor
                 &nbsp;(<a href="#Funcionario">FK</a>)
               </td><td class="tdTableDefinition">cpf_supervisor</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">CPF do supervisor. &Eacute; uma FK para a pr&oacute;pria tabela, pois o supervisor tamb&eacute;m &eacute; um funcion&aacute;rio.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
-                    <td class="tdTableDefinition">numero_departamento</td><td class="tdTableDefinition">numero_departamento</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+                    <td class="tdTableDefinition">numero_departamento
+                &nbsp;(<a href="#departamento">FK</a>)
+              </td><td class="tdTableDefinition">numero_departamento</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">N&uacute;mero do departamento do funcion&aacute;rio. &Eacute; uma FK para a tabela departamento.</div>
+                    </td>
                 </tr>
             </table>
             <div class="references">
@@ -167,6 +270,9 @@
                 <ul>
                     <li>
                         <a href="#Funcionario">Funcionario</a> through (cpf_supervisor)
+                    </li>
+                    <li>
+                        <a href="#departamento">departamento</a> through (numero_departamento)
                     </li>
                 </ul>
                 <p class="subTitle">Referenced By</p>
@@ -204,8 +310,21 @@
                 &nbsp;(<a href="#departamento">FK</a>)
               </td><td class="tdTableDefinition">numero_departamento</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">
+                            N&uacute;mero do departamento. &Eacute; uma FK para departamento.
+                            <br>
+                        </div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">local (PK)</td><td class="tdTableDefinition">local</td><td class="tdTableDefinition">VARCHAR(15)</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Localiza&ccedil;&atilde;o do departamento.</div>
+                    </td>
                 </tr>
             </table>
             <div class="references">
@@ -233,16 +352,36 @@
                 <tr valign="top">
                     <td class="tdTableDefinition">numero_projeto (PK)</td><td class="tdTableDefinition">numero_projeto</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">N&uacute;mero do projeto.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">nome_projeto</td><td class="tdTableDefinition">nome_projeto</td><td class="tdTableDefinition">VARCHAR(15)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Nome do projeto. Deve ser &uacute;nico, &eacute; uma chave alternativa.</div>
+                    </td>
                 </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">numero_departamento
                 &nbsp;(<a href="#departamento">FK</a>)
               </td><td class="tdTableDefinition">numero_departamento</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">N&uacute;mero do departamento que o projeto pertence. &Eacute; uma FK para a tabela departamento.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">local_projeto</td><td class="tdTableDefinition">local_projeto</td><td class="tdTableDefinition">VARCHAR(15)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Localiza&ccedil;&atilde;o do projeto.</div>
+                    </td>
                 </tr>
             </table>
             <div class="references">
@@ -278,13 +417,28 @@
                 &nbsp;(<a href="#Funcionario">FK</a>)
               </td><td class="tdTableDefinition">cpf_funcionario</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">CPF dp funcion&aacute;rio. &Eacute; uma FK para a tabela funcion&aacute;rio.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">numero_projeto (PK)
                 &nbsp;(<a href="#projeto">FK</a>)
               </td><td class="tdTableDefinition">numero_projeto</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">N&uacute;mero do projeto. &Eacute; uma FK para a tabela projeto.</div>
+                    </td>
+                </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">horas</td><td class="tdTableDefinition">horas</td><td class="tdTableDefinition">DECIMAL(3,1)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Horas trabalhadas pelo funcion&aacute;rio no projeto.</div>
+                    </td>
                 </tr>
             </table>
             <div class="references">
