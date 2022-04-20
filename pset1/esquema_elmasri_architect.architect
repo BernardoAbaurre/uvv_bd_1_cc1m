@@ -139,8 +139,8 @@
     <column id="COL39" populated="true" UUID="6bc9c459-a80f-4392-b542-f121c786e553" autoIncrement="false" autoIncrementSequenceName="trabalha_em_cpf_funcionario_seq" defaultValue="" name="cpf_funcionario" nullable="0" physicalName="cpf_funcionario" precision="11" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
      <remarks>CPF dp funcionário. É uma FK para a tabela funcionário.</remarks>
     </column>
-    <column id="COL40" populated="true" UUID="19275dec-3b7c-41cc-b8d7-09c489fadf78" autoIncrement="false" autoIncrementSequenceName="projeto_numero_projeto_seq" defaultValue="" name="numero_projeto" nullable="0" physicalName="numero_projeto" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks>Número do projeto. É uma FK para a tabela projeto.</remarks>
+    <column id="COL40" populated="true" UUID="f46a3476-36c9-42ec-b638-88c0df9fdfc4" autoIncrement="false" autoIncrementSequenceName="trabalha_em_numero_projeto_seq" defaultValue="" name="numero_projeto" nullable="0" physicalName="numero_projeto" precision="0" primaryKeySeq="1" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
     </column>
     <column id="COL41" populated="true" UUID="2c937be5-0044-46bb-9c5f-a72ff56ae815" autoIncrement="false" autoIncrementSequenceName="trabalha_em_horas_seq" defaultValue="" name="horas" nullable="0" physicalName="horas" precision="3" referenceCount="1" scale="1" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
      <remarks>Horas trabalhadas pelo funcionário no projeto.</remarks>
@@ -153,7 +153,7 @@
     <folder id="FOLTAB384" populated="true" name="Indices" physicalName="Indices" type="4">
     <index id="IDX42" populated="true" UUID="cef926af-47f2-4f11-8c33-053661ff7b44" clustered="false" name="pk_trabalha_em" physicalName="pk_trabalha_em" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC43" populated="true" UUID="c7c32667-fd96-4c80-9333-7cd8dbeb61d4" ascendingOrDescending="UNSPECIFIED" column-ref="COL39" name="cpf_funcionario" physicalName="cpf_funcionario" />
-     <index-column id="IDC44" populated="true" UUID="d93bf361-b1bd-488f-97e0-dee8a0c127d9" ascendingOrDescending="UNSPECIFIED" column-ref="COL40" name="numero_projeto" physicalName="numero_projeto" />
+     <index-column id="IDC44" populated="true" UUID="754800d5-510c-4ba3-857f-e7838688bf4c" ascendingOrDescending="UNSPECIFIED" column-ref="COL40" name="numero_projeto" physicalName="numero_projeto" />
     </index>
    </folder>
   </table>
@@ -209,15 +209,15 @@
    <relationship id="REL66" populated="true" UUID="950c9e3c-06c8-45b7-a6bd-c181e9ce84ab" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="departamento_funcionario_fk" physicalName="departamento_funcionario_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP67" populated="true" UUID="c3f2a1de-d05e-43d1-8e6b-2d568a99db42" fk-column-ref="COL11" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL15" />
    </relationship>
-   <relationship id="REL68" populated="true" UUID="7c5d3d86-b3c1-4c47-bc52-01c1ab118b3e" deferrability="7" deleteRule="3" fk-table-ref="TAB38" fkCardinality="7" identifying="true" name="projeto_trabalha_em_fk" physicalName="projeto_trabalha_em_fk" pk-table-ref="TAB29" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP69" populated="true" UUID="d23da12b-16bd-4fcb-80a7-4016060d060a" fk-column-ref="COL40" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL30" />
+   <relationship id="REL68" populated="true" UUID="b5301c48-5fa9-4a05-81c0-fec5f744a7a1" deferrability="7" deleteRule="3" fk-table-ref="TAB38" fkCardinality="7" identifying="true" name="projeto_trabalha_em_fk" physicalName="projeto_trabalha_em_fk" pk-table-ref="TAB29" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP69" populated="true" UUID="d5b2ee40-800e-4758-846e-c2ad11d7b749" fk-column-ref="COL40" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL30" />
    </relationship>
   </relationships>
  </target-database>
  <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="0.9999999999999999" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="0.9999999999999999" viewportX="523" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="724" y="159" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB14" x="1165" y="245" bgColor="0xe8cfdb" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB23" x="1165" y="74" bgColor="0xe8cfdb" fgColor="0x000000" rounded="false" dashed="false"/>
@@ -227,11 +227,11 @@
   <table-link relationship-ref="REL54" pkConnection="0.29012345679012347" fkConnection="0.8699186991869918" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="36"/>
   <table-link relationship-ref="REL56" pkConnection="0.45121951219512196" fkConnection="0.41134751773049644" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL58" pkConnection="0.5648148148148148" fkConnection="0.5736196319018405" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL68" pkConnection="0.31666666666666665" fkConnection="0.5656565656565656" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL62" pkConnection="0.5012722646310432" fkConnection="0.47282608695652173" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="132"/>
   <table-link relationship-ref="REL64" pkConnection="0.4961832061068702" fkConnection="0.5013262599469496" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="72"/>
   <table-link relationship-ref="REL60" pkConnection="0.5284552845528455" fkConnection="0.8916666666666667" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="33"/>
   <table-link relationship-ref="REL66" pkConnection="0.30833333333333335" fkConnection="0.9471544715447154" rLineColor="0xe41a1c" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL68" pkConnection="0.2916666666666667" fkConnection="0.5858585858585859" rLineColor="0x2e3436" pkLabelText="" fkLabelText="" orientation="18"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">
