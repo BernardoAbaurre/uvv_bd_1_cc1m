@@ -6,10 +6,11 @@
     </head>
     <body>
         <center>
-            <h2>Detalhes do BD Elmasri</h2>
+            <h2>Elmasri</h2>
         </center>
         <img src="pset1/esquema_elmasri_bernardo.png" alt="esquema_elmasri_bernardo">
         <h3>List of tables</h3>
+         <h3>List of tables</h3>
         <ul>
             <li>
                 <a href="#departamento">departamento</a>
@@ -35,8 +36,9 @@
                 departamento<a name="departamento"></a>
             </h1>
             <h2>
-                (Physical Name: departamento)
-            </h2>
+      (Physical Name: departamento)
+      </h2>
+            <p class="comment">Tabela que armazena as informa&ccedil;o&#7869;s dos departamentos.</p>
         </div>
         <div class="table">
             <table class="tableDefinition" width="100%">
@@ -104,8 +106,9 @@
                 dependente<a name="dependente"></a>
             </h1>
             <h2>
-                (Physical Name: dependente)
-            </h2>
+      (Physical Name: dependente)
+      </h2>
+            <p class="comment">Tabela que armazena as informa&ccedil;&otilde;es dos dependentes dos funcion&aacute;rios.</p>
         </div>
         <div class="table">
             <table class="tableDefinition" width="100%">
@@ -169,8 +172,9 @@
                 Funcionario<a name="Funcionario"></a>
             </h1>
             <h2>
-                (Physical Name: funcionario)
-            </h2>
+      (Physical Name: funcionario)
+      </h2>
+            <p class="comment">Tabela que armazena as informa&ccedil;&otilde;es dos funcion&aacute;rios.</p>
         </div>
         <div class="table">
             <table class="tableDefinition" width="100%">
@@ -214,10 +218,7 @@
                 </tr>
                 <tr>
                     <td colspan="4">
-                        <div class="comment">
-                            Data de nascimento do funcion&aacute;rio.
-                            <br>
-                        </div>
+                        <div class="comment">Data de nascimento do funcion&aacute;rio.</div>
                     </td>
                 </tr>
                 <tr valign="top">
@@ -297,8 +298,13 @@
                 localizacoes_departamento<a name="localizacoes_departamento"></a>
             </h1>
             <h2>
-                (Physical Name: localizacoes_departamento)
-            </h2>
+      (Physical Name: localizacoes_departamento)
+      </h2>
+            <p class="comment">
+                Tabela que armazena as poss&iacute;veis localiza&ccedil;&otilde;es dos departamentos.
+                <br>
+                <br>
+            </p>
         </div>
         <div class="table">
             <table class="tableDefinition" width="100%">
@@ -312,10 +318,7 @@
                 </tr>
                 <tr>
                     <td colspan="4">
-                        <div class="comment">
-                            N&uacute;mero do departamento. &Eacute; uma FK para departamento.
-                            <br>
-                        </div>
+                        <div class="comment">N&uacute;mero do departamento. &Eacute; uma FK para departamento.</div>
                     </td>
                 </tr>
                 <tr valign="top">
@@ -341,8 +344,9 @@
                 projeto<a name="projeto"></a>
             </h1>
             <h2>
-                (Physical Name: projeto)
-            </h2>
+      (Physical Name: projeto)
+      </h2>
+            <p class="comment">Tabela que armazena as informa&ccedil;&otilde;es sobre os projetos dos departamentos.</p>
         </div>
         <div class="table">
             <table class="tableDefinition" width="100%">
@@ -404,8 +408,9 @@
                 trabalha_em<a name="trabalha_em"></a>
             </h1>
             <h2>
-                (Physical Name: trabalha_em)
-            </h2>
+      (Physical Name: trabalha_em)
+      </h2>
+            <p class="comment">Tabela para armazenar quais funcion&aacute;rios trabalham em quais projetos.</p>
         </div>
         <div class="table">
             <table class="tableDefinition" width="100%">
@@ -426,11 +431,6 @@
                     <td class="tdTableDefinition">numero_projeto (PK)
                 &nbsp;(<a href="#projeto">FK</a>)
               </td><td class="tdTableDefinition">numero_projeto</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
-                </tr>
-                <tr>
-                    <td colspan="4">
-                        <div class="comment">N&uacute;mero do projeto. &Eacute; uma FK para a tabela projeto.</div>
-                    </td>
                 </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">horas</td><td class="tdTableDefinition">horas</td><td class="tdTableDefinition">DECIMAL(3,1)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
