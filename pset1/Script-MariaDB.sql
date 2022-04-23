@@ -15,7 +15,7 @@ CREATE TABLE funcionario (
                 endereco VARCHAR(30),
                 sexo CHAR(1),
                 salario DECIMAL(10,2),
-                cpf_supervisor CHAR(11) NOT NULL,
+                cpf_supervisor CHAR(11),
                 numero_departamento INTEGER NOT NULL,
                 CONSTRAINT pk_funcionario PRIMARY KEY (cpf)
 );
@@ -115,13 +115,6 @@ NOT DEFERRABLE;
 
 ALTER TABLE trabalha_em ADD CONSTRAINT funcionario_trabalha_em_fk
 FOREIGN KEY (cpf_funcionario)
-REFERENCES funcionario (cpf)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
-
-ALTER TABLE departamento ADD CONSTRAINT funcionario_departamento_fk
-FOREIGN KEY (cpf_gerente)
 REFERENCES funcionario (cpf)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
