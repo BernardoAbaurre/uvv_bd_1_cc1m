@@ -17,7 +17,7 @@
         <center>
             <h2>esquema_elmasri_architect</h2>
         </center>
-        <img src="pset1/esquema_elmasri_bernardo.png" alt="esquema_elmasri_bernardo">
+        <img src="esquema_elmasri_bernardo.png" alt="esquema_elmasri_bernardo">
         <h3>List of tables</h3>
         <ul>
             <li>
