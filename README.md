@@ -248,21 +248,21 @@
                 <tr valign="top">
                     <td class="tdTableDefinition">cpf_supervisor
                 &nbsp;(<a href="#Funcionario">FK</a>)
-              </td><td class="tdTableDefinition">cpf_supervisor</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+              </td><td class="tdTableDefinition">cpf_supervisor</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
                 </tr>
                 <tr>
                     <td colspan="4">
-                        <div class="comment">CPF do supervisor. &Eacute; uma FK para a pr&oacute;pria tabela, pois o supervisor tamb&eacute;m &eacute; um funcion&aacute;rio.</div>
+                        <div class="comment">CPF do supervisor. &Eacute; uma FK para a pr&oacute;pria tabela, pois o supervisor tamb&eacute;m &eacute; um funcion&aacute;rio. Pode ser NULL porque o presidente da impresa não tem supervisor</div>
                     </td>
                 </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">numero_departamento
-                &nbsp;(<a href="#departamento">FK</a>)
+                &nbsp;
               </td><td class="tdTableDefinition">numero_departamento</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
                 <tr>
                     <td colspan="4">
-                        <div class="comment">N&uacute;mero do departamento do funcion&aacute;rio. &Eacute; uma FK para a tabela departamento.</div>
+                        <div class="comment">N&uacute;mero do departamento do funcion&aacute;rio.</div>
                     </td>
                 </tr>
             </table>
