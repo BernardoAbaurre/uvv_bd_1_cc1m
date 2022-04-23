@@ -86,15 +86,14 @@
         padding:0.25em;
       }
     </style>
-        <title>elmasri</title>
+        <title>esquema_elmasri_architect</title>
     </head>
     <body>
         <center>
-            <h2>Elmasri</h2>
+            <h2>esquema_elmasri_architect</h2>
         </center>
         <img src="esquema_elmasri_bernardo.png" alt="esquema_elmasri_bernardo">
         <h3>List of tables</h3>
-         <h3>List of tables</h3>
         <ul>
             <li>
                 <a href="#departamento">departamento</a>
@@ -104,6 +103,9 @@
             </li>
             <li>
                 <a href="#Funcionario">Funcionario</a>
+            </li>
+            <li>
+                <a href="#gerente">gerente</a>
             </li>
             <li>
                 <a href="#localizacoes_departamento">localizacoes_departamento</a>
@@ -122,7 +124,6 @@
             <h2>
       (Physical Name: departamento)
       </h2>
-            <p class="comment">Tabela que armazena as informa&ccedil;o&#7869;s dos departamentos.</p>
         </div>
         <div class="table">
             <table class="tableDefinition" width="100%">
@@ -155,12 +156,12 @@
                 </tr>
                 <tr valign="top">
                     <td class="tdTableDefinition">cpf_gerente
-                &nbsp;(<a href="#Funcionario">FK</a>)
+                &nbsp;(<a href="#gerente">FK</a>)
               </td><td class="tdTableDefinition">cpf_gerente</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
                 <tr>
                     <td colspan="4">
-                        <div class="comment">CPF do gerente do departamento. &Eacute; uma FK para a tabela funcion&aacute;rios.</div>
+                        <div class="comment">CPF do gerente do departamento. &Eacute; uma FK para a tabela gerente.</div>
                     </td>
                 </tr>
             </table>
@@ -168,7 +169,7 @@
                 <p class="subTitle">References</p>
                 <ul>
                     <li>
-                        <a href="#Funcionario">Funcionario</a> through (cpf_gerente)
+                        <a href="#gerente">gerente</a> through (cpf_gerente)
                     </li>
                 </ul>
                 <p class="subTitle">Referenced By</p>
@@ -180,7 +181,7 @@
                         <a href="#localizacoes_departamento">localizacoes_departamento</a> referencing (numero_departamento)
                     </li>
                     <li>
-                        <a href="#Funcionario">Funcionario</a> referencing (numero_departamento)
+                        <a href="#trabalha_em">trabalha_em</a> referencing (numero_departamento)
                     </li>
                 </ul>
             </div>
@@ -192,7 +193,6 @@
             <h2>
       (Physical Name: dependente)
       </h2>
-            <p class="comment">Tabela que armazena as informa&ccedil;&otilde;es dos dependentes dos funcion&aacute;rios.</p>
         </div>
         <div class="table">
             <table class="tableDefinition" width="100%">
@@ -258,7 +258,6 @@
             <h2>
       (Physical Name: funcionario)
       </h2>
-            <p class="comment">Tabela que armazena as informa&ccedil;&otilde;es dos funcion&aacute;rios.</p>
         </div>
         <div class="table">
             <table class="tableDefinition" width="100%">
@@ -306,7 +305,7 @@
                     </td>
                 </tr>
                 <tr valign="top">
-                    <td class="tdTableDefinition">endereco</td><td class="tdTableDefinition">endereco</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+                    <td class="tdTableDefinition">endereco</td><td class="tdTableDefinition">endereco</td><td class="tdTableDefinition">VARCHAR(50)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
                 </tr>
                 <tr>
                     <td colspan="4">
@@ -336,17 +335,7 @@
                 </tr>
                 <tr>
                     <td colspan="4">
-                        <div class="comment">CPF do supervisor. &Eacute; uma FK para a pr&oacute;pria tabela, pois o supervisor tamb&eacute;m &eacute; um funcion&aacute;rio. Pode ser NULL porque o presidente da impresa não tem supervisor</div>
-                    </td>
-                </tr>
-                <tr valign="top">
-                    <td class="tdTableDefinition">numero_departamento
-                &nbsp;
-              </td><td class="tdTableDefinition">numero_departamento</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
-                </tr>
-                <tr>
-                    <td colspan="4">
-                        <div class="comment">N&uacute;mero do departamento do funcion&aacute;rio.</div>
+                        <div class="comment">CPF do supervisor. &Eacute; uma FK para a pr&oacute;pria tabela, pois o supervisor tamb&eacute;m &eacute; um funcion&aacute;rio.</div>
                     </td>
                 </tr>
             </table>
@@ -355,9 +344,6 @@
                 <ul>
                     <li>
                         <a href="#Funcionario">Funcionario</a> through (cpf_supervisor)
-                    </li>
-                    <li>
-                        <a href="#departamento">departamento</a> through (numero_departamento)
                     </li>
                 </ul>
                 <p class="subTitle">Referenced By</p>
@@ -372,7 +358,47 @@
                         <a href="#trabalha_em">trabalha_em</a> referencing (cpf)
                     </li>
                     <li>
-                        <a href="#departamento">departamento</a> referencing (cpf)
+                        <a href="#gerente">gerente</a> referencing (cpf)
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tableNameHeading">
+            <h1>
+                gerente<a name="gerente"></a>
+            </h1>
+            <h2>
+      (Physical Name: gerente)
+      </h2>
+            <p class="comment">Funcion&aacute;rios que s&atilde;o gerentes de departamentos</p>
+        </div>
+        <div class="table">
+            <table class="tableDefinition" width="100%">
+                <tr>
+                    <td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+                </tr>
+                <tr valign="top">
+                    <td class="tdTableDefinition">cpf_gerente (PK)
+                &nbsp;(<a href="#Funcionario">FK</a>)
+              </td><td class="tdTableDefinition">cpf_gerente</td><td class="tdTableDefinition">CHAR</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">CPF do gerente do departamento. &Eacute; uma FK para a tabela funcionario.</div>
+                    </td>
+                </tr>
+            </table>
+            <div class="references">
+                <p class="subTitle">References</p>
+                <ul>
+                    <li>
+                        <a href="#Funcionario">Funcionario</a> through (cpf_gerente)
+                    </li>
+                </ul>
+                <p class="subTitle">Referenced By</p>
+                <ul>
+                    <li>
+                        <a href="#departamento">departamento</a> referencing (cpf_gerente)
                     </li>
                 </ul>
             </div>
@@ -384,11 +410,6 @@
             <h2>
       (Physical Name: localizacoes_departamento)
       </h2>
-            <p class="comment">
-                Tabela que armazena as poss&iacute;veis localiza&ccedil;&otilde;es dos departamentos.
-                <br>
-                <br>
-            </p>
         </div>
         <div class="table">
             <table class="tableDefinition" width="100%">
@@ -430,7 +451,6 @@
             <h2>
       (Physical Name: projeto)
       </h2>
-            <p class="comment">Tabela que armazena as informa&ccedil;&otilde;es sobre os projetos dos departamentos.</p>
         </div>
         <div class="table">
             <table class="tableDefinition" width="100%">
@@ -446,7 +466,7 @@
                     </td>
                 </tr>
                 <tr valign="top">
-                    <td class="tdTableDefinition">nome_projeto</td><td class="tdTableDefinition">nome_projeto</td><td class="tdTableDefinition">VARCHAR(15)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+                    <td class="tdTableDefinition">nome_projeto</td><td class="tdTableDefinition">nome_projeto</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
                 </tr>
                 <tr>
                     <td colspan="4">
@@ -494,7 +514,6 @@
             <h2>
       (Physical Name: trabalha_em)
       </h2>
-            <p class="comment">Tabela para armazenar quais funcion&aacute;rios trabalham em quais projetos.</p>
         </div>
         <div class="table">
             <table class="tableDefinition" width="100%">
@@ -524,12 +543,25 @@
                         <div class="comment">Horas trabalhadas pelo funcion&aacute;rio no projeto.</div>
                     </td>
                 </tr>
+                <tr valign="top">
+                    <td class="tdTableDefinition">numero_departamento
+                &nbsp;(<a href="#departamento">FK</a>)
+              </td><td class="tdTableDefinition">numero_departamento</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="comment">Numero do departamento que o funcion&aacute;rio trabalha. &Eacute; uma FK para a tabela departamento</div>
+                    </td>
+                </tr>
             </table>
             <div class="references">
                 <p class="subTitle">References</p>
                 <ul>
                     <li>
                         <a href="#Funcionario">Funcionario</a> through (cpf_funcionario)
+                    </li>
+                    <li>
+                        <a href="#departamento">departamento</a> through (numero_departamento)
                     </li>
                     <li>
                         <a href="#projeto">projeto</a> through (numero_projeto)
