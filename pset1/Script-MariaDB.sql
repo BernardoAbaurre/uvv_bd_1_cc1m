@@ -54,7 +54,7 @@ ALTER TABLE departamento MODIFY COLUMN nome_departamento VARCHAR(15) COMMENT 'No
 ALTER TABLE departamento MODIFY COLUMN data_inicio_gerente DATE COMMENT 'Data de início do gerente no departamento.';
 ALTER TABLE departamento MODIFY COLUMN cpf_gerente CHAR(11) COMMENT 'CPF do gerente do departamento. É uma FK para a tabela gerente.';
 
-/*transfora a coluna nome_departamento em uma chave alternativa*/
+/*transforma a coluna nome_departamento em uma chave alternativa*/
 CREATE UNIQUE INDEX nome_departamento_idx
  ON departamento
  ( nome_departamento );
