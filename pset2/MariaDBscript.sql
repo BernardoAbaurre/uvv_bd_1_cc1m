@@ -130,6 +130,15 @@ from (select distinct cpf_funcionario,numero_departamento from trabalha_em) as t
 group by numero_departamento;
 
 -- Questão 15
+select
+concat(f.primeiro_nome,' ',nome_meio,'. ',ultimo_nome) as nome,
+te.numero_projeto,te.numero_departamento,
+projeto.nome_projeto
+from((funcionario as f
+inner join trabalha_em as te on f.cpf = te.cpf_funcionario)
+inner join projeto on projeto.numero_projeto = te.numero_projeto);
+
+
 
 
 
